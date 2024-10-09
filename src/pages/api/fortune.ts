@@ -30,7 +30,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
               {
                 role: "user",
                 content: [
-                  { type: "text", text: "Please provide me the fortune for user who uploaded this file, based on the content of the file. The fortune should be in the style of a fortune cookie slip and under 255 characters." },
+                  { type: "text", text: "Please provide me the fortune for a user who uploaded this file, based on the content of the file. The fortune should be in the style of a fortune cookie slip and under 255 characters." },
                   {
                     type: "image_url",
                     image_url: {

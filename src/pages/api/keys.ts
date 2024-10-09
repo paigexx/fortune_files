@@ -5,11 +5,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method === 'GET') {
     try {
         const key = await pinata.keys.create({
-            keyName: "user 1",
+            keyName: "one-time-key",
             permissions: {
               admin: true,
             },
-            maxUses: 2,
+            maxUses: 1,
           });
       return res.status(200).json(key);
     } catch (e) {
