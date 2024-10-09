@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef } from "react";
+import Link from "next/link";
 
 export default function Home() {
   const [file, setFile] = useState<string>("");
@@ -47,7 +48,7 @@ export default function Home() {
     }
   };
 
-  const handleChange = (e: any) => {
+  const handleChange = (e: any ) => {
     setFile(e.target.files[0]);
     console.log(e.target.files[0]);
   };
@@ -88,15 +89,15 @@ export default function Home() {
         <div className="flex flex-col gap-4 items-center">
           <p className="text-white text-lg text-center">{fortune}</p>
           <div>
-            <a
+            <Link
               href="/"
               className="my-4 px-4 py-2 bg-lime-500 text-black rounded-full border border-black hover:bg-lime-500 hover:text-white transition duration-300"
             >
               Try Again 🥠
-            </a>
+            </Link>
           </div>
         </div>
-        
+
       }
       {uploading && 
         <p className="text-white text-lg">Cookie is thinking...</p>

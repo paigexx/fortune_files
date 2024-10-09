@@ -1,5 +1,4 @@
 import { pinata, openai } from "../../../utils/config";
-import { Readable } from "stream";
 import type { NextApiRequest, NextApiResponse } from "next";
 
 export const config = {
