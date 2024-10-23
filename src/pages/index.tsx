@@ -29,7 +29,6 @@ export default function Home() {
 
       const data = new FormData();
       data.append("file", file);
-      data.append("keyvalues", JSON.stringify({ example: true }));
 
       const fileRes = await fetch("https://uploads.pinata.cloud/v3/files", {
         method: "POST",
